@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: ["https://test-mern-frontend-full.vercel.app"],
   })
 );
 

@@ -1,6 +1,7 @@
 const { Test } = require("../models/test.models");
 
 const addtask = async (req, res) => {
+  console.log(`data getting from req.body is ${req.body}`);
   const { title } = req.body;
   if (!title) {
     return res.status(400).json({ message: "title is required...!!!" });
@@ -27,7 +28,7 @@ const addtask = async (req, res) => {
 
 const getTask = async (req, res) => {
   try {
-    console.log("we are in gettask controllers");
+    // console.log("we are in gettask controllers");
     const response = await Test.find();
     // console.log(response);
     if (response) {
